@@ -177,7 +177,29 @@ return (
 );
 ```
 
+- FramerX的样式布局
+  - 在 FramerX 里给 Frame 设置宽高 100% 后也可以在界面大小自定义
+  - 这是因为我们所有的自定义代码组件，在界面新建后，FramerX 都会为我们默认在最外层加一个框
+
+### Graphic
+
+![g1](http://cdn.jerryshi.com/20200329164933.png)
+
+- 删除某个图片paths上的一条边
+  - 双击图形打开锚点编辑界面
+  - 轻点某条边出现浅蓝色即可点击删除
+- 图形支持翻转：左右和上下
+- 点解界面 `Fill` 可以选择是否导出图形背景色，默认是 `exclude`
+
 ---
+
+### Page
+
+![p1](http://cdn.jerryshi.com/666.gif)
+
+- 页面轮播效果
+  - `Overflow: show`
+  - `Gap: 30`
 
 ## 1-FramerX
 
@@ -199,7 +221,7 @@ return (
 
 ### Part II
 
-- 在颜色选择器 `[linear]` 模式下，按 [ctl + c]可以快速启动吸色管
+- 在颜色选择器 `[linear]` 模式下，按 `[ctl + c]` 可以快速启动吸色管
 - 在 `Frame` 中，如果某个元素超过超出了圆角部分，可以设置 `[hidden]` 属性
 - 在 `Frame` 上，设置 `[Create Component]` 即可使该 frame 成为一个可复用的组件
   - 成为 “组件”后，可以勾选子组件合为一体
