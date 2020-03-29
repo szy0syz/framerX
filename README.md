@@ -188,24 +188,24 @@ return (
 
 ![home-icon](http://cdn.jerryshi.com/20200328171743.png)
 
-- 创建一个 [Home] 图标
-  - [g] 进入图形编辑模式，拖一个多边形，改成五边形
-  - [enter] 进入 path 编辑，把底边两点和腰上两点垂直
-  - 画个小长方形 [门] 放好后，选择两个图形，模式为 [subtarct]
-  - 在该图形下的 [Substract] 上选择 [flatten]，使两个图形扁平化(俩图形变成路径)
-  - 选择该路径 [Path]后按 [enter]进入路径点编辑模式
-  - 按住 [shift] 选择门的下边缘两个点，设置 radius 即可完成
+- 创建一个 `[Home]` 图标
+  - `[g]` 进入图形编辑模式，拖一个多边形，改成五边形
+  - `[enter]` 进入 path 编辑，把底边两点和腰上两点垂直
+  - 画个小长方形 `[门]` 放好后，选择两个图形，模式为 `[subtarct]`
+  - 在该图形下的 `[Substract]` 上选择 `[flatten]`，使两个图形扁平化(俩图形变成路径)
+  - 选择该路径 `[Path]` 后按 `[enter]` 进入路径点编辑模式
+  - 按住 `[shift]` 选择门的下边缘两个点，设置 radius 即可完成
 - 点击 设备标题 [Apple iPhone XS] 后即可拖动屏幕宽度
 
 ### Part II
 
-- 在颜色选择器 [linear] 模式下，按 [ctl + c]可以快速启动吸色管
-- 在 Frame 中，如果某个元素超过超出了圆角部分，可以设置 [hidden] 属性
-- 在 Frame 上，设置 [Create Component] 即可使该 frame 成为一个可复用的组件
+- 在颜色选择器 `[linear]` 模式下，按 [ctl + c]可以快速启动吸色管
+- 在 `Frame` 中，如果某个元素超过超出了圆角部分，可以设置 `[hidden]` 属性
+- 在 `Frame` 上，设置 `[Create Component]` 即可使该 frame 成为一个可复用的组件
   - 成为 “组件”后，可以勾选子组件合为一体
-- Text 元素如果在某容器内，最好设置 [fixed] 属性，否则容易发生位移
-- [icon-generator] 包的图标需要到对应网站上去找：Feather、Material、Font Awesome
-- 如果一个组件在多个页面中有交互功能，复制前先将它设置为 Component
-- 同样的 Home 页 Card组件在复用前，先设置 [Create Component]
+- Text 元素如果在某容器内，最好设置 `[fixed]` 属性，否则容易发生位移
+- `[icon-generator]` 包的图标需要到对应网站上去找：`Feather`、`Material`、`Font` `Awesome`
+- 如果一个组件在多个页面中有交互功能，复制前先将它设置为 `Component`
+- 同样的 `Home` 页 `Card` 组件在复用前，先设置 `[Create Component]`
 
 ## 2-FramerX Playground
