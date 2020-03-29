@@ -61,6 +61,54 @@ export function Card(props) {
   - `variants` 的 `label` 属性名
     - 如果要用这个 `label` 那就必须先把动画状态对象传递给 `variants`，然后就可以在 `.start` 中字符串方式用
   - 函数
+    - 一定要返回动画对象
+- 可以在两个不同元素上使用 useAnimation 捕获，然后 `.start` 时两个同时播放动画，且可以用 `custom` + 函数 设定范围
+
+### 延迟动画
+
+- `custom` + 函数对象返回 实现分布动画
+  - 以后在 `map` 中设置 `custom` 属性来控制延迟
+
+```js
+const ani = i => ({
+  rotate: 30,
+  transition: {
+    delay: i * 0.5,
+  },
+});
+
+export function Card(props) {
+  const controller = useAnimation();
+
+  return (
+    <div>
+      <Frame
+        backgroundColor="3d06ff"
+        style={style}
+        radius={20}
+        shadow={'0px 0px 10px #3d06ff'}
+        onTap={() => controller.start(ani)}
+        animate={controller}
+        custom={0}
+      >
+        Framer111
+      </Frame>
+      <Frame
+        backgroundColor="3d06ff"
+        style={style}
+        radius={20}
+        shadow={'0px 0px 10px #3d06ff'}
+        onTap={() => controller.start(ani)}
+        animate={controller}
+        y={300}
+        custom={1}
+      >
+        Framer222
+      </Frame>
+    </div>
+  );
+}
+```
 
 ```js
 // ----useState-
@@ -86,6 +134,50 @@ onTap={() => {
 }}
 animate={controller}
 ```
+
+### 分布动画
+
+- `async/await`
+
+```js
+async function stepAni() {
+  await controller.start({ rotate: 30 });
+  await controller.start({ rotate: 60 });
+  await controller.start({ rotate: 90 });
+  await controller.start({ rotate: 270 });
+}
+
+return (
+  <div>
+    <Frame
+      backgroundColor="3d06ff"
+      style={style}
+      radius={20}
+      shadow={'0px 0px 10px #3d06ff'}
+      onTap={() => {
+        stepAni();
+      }}
+      animate={controller}
+      custom={0}
+    >
+      Framer111
+    </Frame>
+    <Frame
+      backgroundColor="3d06ff"
+      style={style}
+      radius={20}
+      shadow={'0px 0px 10px #3d06ff'}
+      animate={controller}
+      y={300}
+      custom={1}
+    >
+      Framer222
+    </Frame>
+  </div>
+);
+```
+
+---
 
 ## 1-FramerX
 
