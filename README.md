@@ -231,11 +231,12 @@ return (
 
 - 在颜色选择器 `[linear]` 模式下，按 `[ctl + c]` 可以快速启动吸色管
 - 在 `Frame` 中，如果某个元素超过超出了圆角部分，可以设置 `[hidden]` 属性
-- 在 `Frame` 上，设置 `[Create Component]` 即可使该 frame 成为一个可复用的组件
-  - 成为 “组件”后，可以勾选子组件合为一体
-- Text 元素如果在某容器内，最好设置 `[fixed]` 属性，否则容易发生位移
-- `[icon-generator]` 包的图标需要到对应网站上去找：`Feather`、`Material`、`Font` `Awesome`
 - 如果一个组件在多个页面中有交互功能，复制前先将它设置为 `Component`
 - 同样的 `Home` 页 `Card` 组件在复用前，先设置 `[Create Component]`
+- 在 `Frame` 上，设置 `[Create Component]` 即可使该 frame 成为一个可复用的组件
+  - 成为 “组件”后，可以勾选子组件合为一体
+  - 组件被实例化后，可以任意修改属性且不应是父组件
+- Text 元素如果在某容器内，最好设置 `[fixed]` 属性，否则容易发生位移
+- `[icon-generator]` 包的图标需要到对应网站上去找：`Feather`、`Material`、`Font` `Awesome`
 
 ## 2-FramerX Playground
