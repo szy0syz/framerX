@@ -16,17 +16,17 @@ const group = {
   begin: {
     x: -100,
     y: -100,
-    opacity: 0.5,
+    opacity: 0.5
   },
   end: {
     x: 200,
     y: 300,
-    opacity: 0.5,
+    opacity: 0.5
   },
   middle: i => ({
     x: 100 * i,
-    y: 150 * i,
-  }),
+    y: 150 * i
+  })
 };
 
 export function Card(props) {
@@ -36,11 +36,11 @@ export function Card(props) {
       style={style}
       radius={20}
       custom={2.5}
-      shadow={'0px 0px 10px #3d06ff'}
+      shadow={"0px 0px 10px #3d06ff"}
       variants={group}
-      initial={'begin'}
-      animate={'end'}
-      animate={'middle'}
+      initial={"begin"}
+      animate={"end"}
+      animate={"middle"}
     >
       FRAMER
     </Frame>
@@ -73,8 +73,8 @@ export function Card(props) {
 const ani = i => ({
   rotate: 30,
   transition: {
-    delay: i * 0.5,
-  },
+    delay: i * 0.5
+  }
 });
 
 export function Card(props) {
@@ -86,7 +86,7 @@ export function Card(props) {
         backgroundColor="3d06ff"
         style={style}
         radius={20}
-        shadow={'0px 0px 10px #3d06ff'}
+        shadow={"0px 0px 10px #3d06ff"}
         onTap={() => controller.start(ani)}
         animate={controller}
         custom={0}
@@ -97,7 +97,7 @@ export function Card(props) {
         backgroundColor="3d06ff"
         style={style}
         radius={20}
-        shadow={'0px 0px 10px #3d06ff'}
+        shadow={"0px 0px 10px #3d06ff"}
         onTap={() => controller.start(ani)}
         animate={controller}
         y={300}
@@ -153,7 +153,7 @@ return (
       backgroundColor="3d06ff"
       style={style}
       radius={20}
-      shadow={'0px 0px 10px #3d06ff'}
+      shadow={"0px 0px 10px #3d06ff"}
       onTap={() => {
         stepAni();
       }}
@@ -166,7 +166,7 @@ return (
       backgroundColor="3d06ff"
       style={style}
       radius={20}
-      shadow={'0px 0px 10px #3d06ff'}
+      shadow={"0px 0px 10px #3d06ff"}
       animate={controller}
       y={300}
       custom={1}
@@ -177,7 +177,7 @@ return (
 );
 ```
 
-- FramerX的样式布局
+- FramerX 的样式布局
   - 在 FramerX 里给 Frame 设置宽高 100% 后也可以在界面大小自定义
   - 这是因为我们所有的自定义代码组件，在界面新建后，FramerX 都会为我们默认在最外层加一个框
 
@@ -185,7 +185,7 @@ return (
 
 ![g1](http://cdn.jerryshi.com/20200329164933.png)
 
-- 删除某个图片paths上的一条边
+- 删除某个图片 paths 上的一条边
   - 双击图形打开锚点编辑界面
   - 轻点某条边出现浅蓝色即可点击删除
 - 图形支持翻转：左右和上下
@@ -238,5 +238,28 @@ return (
   - 组件被实例化后，可以任意修改属性且不应是父组件
 - Text 元素如果在某容器内，最好设置 `[fixed]` 属性，否则容易发生位移
 - `[icon-generator]` 包的图标需要到对应网站上去找：`Feather`、`Material`、`Font` `Awesome`
+
+### Part III
+
+-
+
+### Part IV
+
+- 为什么我的代码组件 `flex` 属性没法生效 ？
+  - 换 styled-components 之类的方式试试
+- 怎么样自定义组件？
+
+```jsx
+export function Course(props) {
+  const { text, color, ...rest } = props;
+
+  return (
+    <Container color={color} {...rest}>
+      {props.children}
+      <p>{text}</p>
+    </Container>
+  );
+}
+```
 
 ## 2-FramerX Playground
